@@ -1,0 +1,32 @@
+[
+  {
+    "Ad": "çalıkuşu",
+    "Yazar": "reşat nuri güntekin",
+    "Tur": "edebiyat",
+    "SayfaSayisi": 550,
+    "OkunduMu": true,
+    "FavoriMi": true,
+    "OkumaBaslangicTarihi": "2025-04-16T15:18:35.526",
+    "OkumaBitisTarihi": "2025-05-30T15:18:35.523"
+  },
+  {
+    "Ad": "Pes Etme Mucizeler Yolda",
+    "Yazar": "Kinsun",
+    "Tur": "Kişisel Gelişim",
+    "SayfaSayisi": 211,
+    "OkunduMu": false,
+    "FavoriMi": false,
+    "OkumaBaslangicTarihi": "2025-08-01T16:26:50.822",
+    "OkumaBitisTarihi": "2025-08-10T16:26:50.815"
+  },
+  {
+    "Ad": "Seyir",
+    "Yazar": "Piraye",
+    "Tur": "Roman",
+    "SayfaSayisi": 446,
+    "OkunduMu": false,
+    "FavoriMi": false,
+    "OkumaBaslangicTarihi": "2025-08-12T00:00:00",
+    "OkumaBitisTarihi": "2025-08-30T00:00:00"
+  }
+]

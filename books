@@ -1,0 +1,18 @@
+[
+  {
+    "Ad": "Süt Ve Bal",
+    "Yazar": "Rupi Kaur",
+    "Tur": "Şiir",
+    "SayfaSayisi": 250,
+    "OkunduMu": true,
+    "FavoriMi": true
+  },
+  {
+    "Ad": "Güneş Ve Onun Çiçekleri",
+    "Yazar": "Rupi Kaur",
+    "Tur": "Şiir",
+    "SayfaSayisi": 330,
+    "OkunduMu": false,
+    "FavoriMi": true
+  }
+]
