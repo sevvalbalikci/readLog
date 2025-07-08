@@ -67,13 +67,68 @@
   },
   {
     "Id": 8,
-    "Ad": "Fccn",
-    "Yazar": "Gbnv",
-    "Tur": "Cghn",
-    "SayfaSayisi": 50,
+    "Ad": "Gökyüzüne Tutunmak",
+    "Yazar": "Elif Kaya",
+    "Tur": "Roman",
+    "SayfaSayisi": 320,
     "OkunduMu": false,
     "FavoriMi": false,
-    "OkumaBaslangicTarihi": "2025-06-01T15:23:12.122",
-    "OkumaBitisTarihi": "2025-07-08T15:23:12.1253442+03:00"
+    "OkumaBaslangicTarihi": "2025-09-01T10:00:00",
+    "OkumaBitisTarihi": "2025-09-15T18:00:00"
+  },
+  {
+    "Id": 9,
+    "Ad": "Veri Bilimine Giriş",
+    "Yazar": "Mehmet Altun",
+    "Tur": "Bilim",
+    "SayfaSayisi": 410,
+    "OkunduMu": true,
+    "FavoriMi": true,
+    "OkumaBaslangicTarihi": "2025-06-12T14:00:00",
+    "OkumaBitisTarihi": "2025-07-01T20:30:00"
+  },
+  {
+    "Id": 10,
+    "Ad": "İçimdeki Sessizlik",
+    "Yazar": "Zeynep Arslan",
+    "Tur": "Psikoloji",
+    "SayfaSayisi": 285,
+    "OkunduMu": false,
+    "FavoriMi": false,
+    "OkumaBaslangicTarihi": "2025-10-05T11:15:00",
+    "OkumaBitisTarihi": "2025-10-20T13:45:00"
+  },
+  {
+    "Id": 11,
+    "Ad": "Yapay Zeka ve Etik",
+    "Yazar": "Dr. Serkan Yılmaz",
+    "Tur": "Teknoloji",
+    "SayfaSayisi": 198,
+    "OkunduMu": true,
+    "FavoriMi": true,
+    "OkumaBaslangicTarihi": "2025-03-22T09:00:00",
+    "OkumaBitisTarihi": "2025-04-01T17:00:00"
+  },
+  {
+    "Id": 12,
+    "Ad": "Aşkın Matematiği",
+    "Yazar": "Cem Tuncel",
+    "Tur": "Aşk",
+    "SayfaSayisi": 366,
+    "OkunduMu": true,
+    "FavoriMi": false,
+    "OkumaBaslangicTarihi": "2025-02-10T16:00:00",
+    "OkumaBitisTarihi": "2025-02-25T21:00:00"
+  },
+  {
+    "Id": 13,
+    "Ad": "Gölge Oyunu",
+    "Yazar": "Nilay Demir",
+    "Tur": "Polisiye",
+    "SayfaSayisi": 444,
+    "OkunduMu": false,
+    "FavoriMi": false,
+    "OkumaBaslangicTarihi": "2025-08-05T19:30:00",
+    "OkumaBitisTarihi": "2025-08-20T20:00:00"
   }
 ]

@@ -20,3 +20,4 @@ C:\Users\Şevval\source\repos\DotNetNot\readLog\obj\Debug\net9.0-windows\readLog
 C:\Users\Şevval\source\repos\DotNetNot\readLog\obj\Debug\net9.0-windows\readLog.genruntimeconfig.cache
 C:\Users\Şevval\source\repos\DotNetNot\readLog\obj\Debug\net9.0-windows\ref\readLog.dll
 C:\Users\Şevval\source\repos\DotNetNot\readLog\obj\Debug\net9.0-windows\readLog.CommentForm.resources
+C:\Users\Şevval\source\repos\DotNetNot\readLog\obj\Debug\net9.0-windows\readLog.CommentListForm.resources

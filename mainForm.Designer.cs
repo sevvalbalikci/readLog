@@ -28,11 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle7 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle8 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle9 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle10 = new DataGridViewCellStyle();
             lblBaslık = new Label();
             lblAd = new Label();
             lblYazar = new Label();
@@ -56,7 +56,7 @@
             lblBitisTarihi = new Label();
             btnGuncelle = new Button();
             btnYorumEkle = new Button();
-            btnYorumlarıGor = new Button();
+            btnYorumlariGor = new Button();
             ((System.ComponentModel.ISupportInitialize)dgvKitaplar).BeginInit();
             ((System.ComponentModel.ISupportInitialize)nudSayfaSayisi).BeginInit();
             SuspendLayout();
@@ -165,47 +165,47 @@
             // dgvKitaplar
             // 
             dgvKitaplar.AllowUserToOrderColumns = true;
-            dataGridViewCellStyle1.BackColor = Color.FromArgb(64, 0, 0);
-            dataGridViewCellStyle1.ForeColor = SystemColors.Info;
-            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Info;
-            dataGridViewCellStyle1.SelectionForeColor = Color.FromArgb(64, 0, 0);
-            dgvKitaplar.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle6.BackColor = Color.FromArgb(64, 0, 0);
+            dataGridViewCellStyle6.ForeColor = SystemColors.Info;
+            dataGridViewCellStyle6.SelectionBackColor = SystemColors.Info;
+            dataGridViewCellStyle6.SelectionForeColor = Color.FromArgb(64, 0, 0);
+            dgvKitaplar.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle6;
             dgvKitaplar.BackgroundColor = Color.FromArgb(64, 0, 0);
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = SystemColors.Control;
-            dataGridViewCellStyle2.Font = new Font("Goudy Old Style", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle2.ForeColor = Color.Black;
-            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Info;
-            dataGridViewCellStyle2.SelectionForeColor = Color.FromArgb(64, 0, 0);
-            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
-            dgvKitaplar.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle7.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = SystemColors.Control;
+            dataGridViewCellStyle7.Font = new Font("Goudy Old Style", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle7.ForeColor = Color.Black;
+            dataGridViewCellStyle7.SelectionBackColor = SystemColors.Info;
+            dataGridViewCellStyle7.SelectionForeColor = Color.FromArgb(64, 0, 0);
+            dataGridViewCellStyle7.WrapMode = DataGridViewTriState.True;
+            dgvKitaplar.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             dgvKitaplar.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = Color.FromArgb(64, 0, 0);
-            dataGridViewCellStyle3.Font = new Font("Goudy Old Style", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle3.ForeColor = SystemColors.Info;
-            dataGridViewCellStyle3.SelectionBackColor = SystemColors.Info;
-            dataGridViewCellStyle3.SelectionForeColor = Color.FromArgb(64, 0, 0);
-            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
-            dgvKitaplar.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle8.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = Color.FromArgb(64, 0, 0);
+            dataGridViewCellStyle8.Font = new Font("Goudy Old Style", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle8.ForeColor = SystemColors.Info;
+            dataGridViewCellStyle8.SelectionBackColor = SystemColors.Info;
+            dataGridViewCellStyle8.SelectionForeColor = Color.FromArgb(64, 0, 0);
+            dataGridViewCellStyle8.WrapMode = DataGridViewTriState.False;
+            dgvKitaplar.DefaultCellStyle = dataGridViewCellStyle8;
             dgvKitaplar.EditMode = DataGridViewEditMode.EditProgrammatically;
             dgvKitaplar.GridColor = SystemColors.Window;
             dgvKitaplar.Location = new Point(388, 136);
             dgvKitaplar.Name = "dgvKitaplar";
-            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = Color.FromArgb(64, 0, 0);
-            dataGridViewCellStyle4.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle4.ForeColor = SystemColors.Info;
-            dataGridViewCellStyle4.SelectionBackColor = SystemColors.Info;
-            dataGridViewCellStyle4.SelectionForeColor = Color.FromArgb(64, 0, 0);
-            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.True;
-            dgvKitaplar.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
-            dataGridViewCellStyle5.BackColor = Color.FromArgb(64, 0, 0);
-            dataGridViewCellStyle5.Font = new Font("Goudy Old Style", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle5.ForeColor = SystemColors.Info;
-            dataGridViewCellStyle5.SelectionBackColor = SystemColors.Info;
-            dataGridViewCellStyle5.SelectionForeColor = Color.FromArgb(64, 0, 0);
-            dgvKitaplar.RowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle9.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = Color.FromArgb(64, 0, 0);
+            dataGridViewCellStyle9.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle9.ForeColor = SystemColors.Info;
+            dataGridViewCellStyle9.SelectionBackColor = SystemColors.Info;
+            dataGridViewCellStyle9.SelectionForeColor = Color.FromArgb(64, 0, 0);
+            dataGridViewCellStyle9.WrapMode = DataGridViewTriState.True;
+            dgvKitaplar.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle10.BackColor = Color.FromArgb(64, 0, 0);
+            dataGridViewCellStyle10.Font = new Font("Goudy Old Style", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle10.ForeColor = SystemColors.Info;
+            dataGridViewCellStyle10.SelectionBackColor = SystemColors.Info;
+            dataGridViewCellStyle10.SelectionForeColor = Color.FromArgb(64, 0, 0);
+            dgvKitaplar.RowsDefaultCellStyle = dataGridViewCellStyle10;
             dgvKitaplar.Size = new Size(755, 375);
             dgvKitaplar.TabIndex = 13;
             dgvKitaplar.CellContentClick += dgvKitaplar_CellContentClick;
@@ -353,17 +353,18 @@
             btnYorumEkle.UseVisualStyleBackColor = false;
             btnYorumEkle.Click += btnYorumEkle_Click;
             // 
-            // btnYorumlarıGor
+            // btnYorumlariGor
             // 
-            btnYorumlarıGor.BackColor = Color.FromArgb(64, 0, 0);
-            btnYorumlarıGor.FlatStyle = FlatStyle.Flat;
-            btnYorumlarıGor.Font = new Font("Goudy Old Style", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnYorumlarıGor.Location = new Point(963, 529);
-            btnYorumlarıGor.Name = "btnYorumlarıGor";
-            btnYorumlarıGor.Size = new Size(180, 47);
-            btnYorumlarıGor.TabIndex = 28;
-            btnYorumlarıGor.Text = "Yorumları Gör";
-            btnYorumlarıGor.UseVisualStyleBackColor = false;
+            btnYorumlariGor.BackColor = Color.FromArgb(64, 0, 0);
+            btnYorumlariGor.FlatStyle = FlatStyle.Flat;
+            btnYorumlariGor.Font = new Font("Goudy Old Style", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnYorumlariGor.Location = new Point(963, 529);
+            btnYorumlariGor.Name = "btnYorumlariGor";
+            btnYorumlariGor.Size = new Size(180, 47);
+            btnYorumlariGor.TabIndex = 28;
+            btnYorumlariGor.Text = "Yorumları Gör";
+            btnYorumlariGor.UseVisualStyleBackColor = false;
+            btnYorumlariGor.Click += btnYorumlariGor_Click_1;
             // 
             // mainForm
             // 
@@ -371,7 +372,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Maroon;
             ClientSize = new Size(1192, 649);
-            Controls.Add(btnYorumlarıGor);
+            Controls.Add(btnYorumlariGor);
             Controls.Add(btnYorumEkle);
             Controls.Add(btnGuncelle);
             Controls.Add(lblBitisTarihi);
@@ -430,6 +431,6 @@
         private Label lblBitisTarihi;
         private Button btnGuncelle;
         private Button btnYorumEkle;
-        private Button btnYorumlarıGor;
+        private Button btnYorumlariGor;
     }
 }

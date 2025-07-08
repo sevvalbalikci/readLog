@@ -4,6 +4,9 @@
     <Compile Update="CommentForm.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="CommentListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="mainForm.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -27,6 +27,7 @@ namespace readLog
             btnKitapEkle.Click += btnKitapEkle_Click;
             btnSil.Click += btnSil_Click;
             btnGuncelle.Click += btnGuncelle_Click;
+            btnYorumlariGor.Click += btnYorumlariGor_Click_1;
         }
 
         private void MainForm_Load(object sender, EventArgs e)
@@ -215,6 +216,7 @@ namespace readLog
         private void SetInitialButtonStates()
         {
             btnDuzenle.Text = "Düzenle";
+            btnDuzenle.Text = "Düzenle";
             btnGuncelle.Text = "Güncelle";
             TemizleKutular();
 
@@ -314,10 +316,6 @@ namespace readLog
             }
         }
 
-        private void btnYorumlarıGor_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void label5_Click(object sender, EventArgs e) { }
         private void lblAd_Click(object sender, EventArgs e) { }
@@ -325,6 +323,12 @@ namespace readLog
         private void lblFavoriMi_Click(object sender, EventArgs e) { }
         private void label1_Click(object sender, EventArgs e) { }
         private void lblBitisTarihi_Click(object sender, EventArgs e) { }
-        private void dgvKitaplar_CellContentClick(object sender, DataGridViewCellEventArgs e){ }
+        private void dgvKitaplar_CellContentClick(object sender, DataGridViewCellEventArgs e) { }
+
+        private void btnYorumlariGor_Click_1(object sender, EventArgs e)
+        {
+            CommentListForm yorumForm = new CommentListForm();
+            yorumForm.ShowDialog();
+        }
     }
 }

@@ -8,9 +8,101 @@
   },
   {
     "Id": 2,
-    "KitapId": 1,
+    "KitapId": 3,
     "YorumcuAdSoyad": "Ali Kara",
-    "YorumMetni": "beğendim ama çok fazla klasik seven biri değilim.",
+    "YorumMetni": "beğendim ama çok fazla klasik seven biri değilim. O yüzden klasik kitap sevmeyen biri varsa sıkılıp beğenmeyebilirsiniz.",
     "YorumTarihi": "2025-07-08T15:27:40.9934427+03:00"
-  }
+  },
+  {
+    "Id": 1,
+    "KitapId": 1,
+    "YorumcuAdSoyad": "Sude Yüz",
+    "YorumMetni": "Çok güzeldi, tavsiye ederim herkese.",
+    "YorumTarihi": "2025-07-08T14:49:59"
+
+  },
+  {
+      "Id": 2,
+      "KitapId": 2,
+      "YorumcuAdSoyad": "Kerem Aslan",
+      "YorumMetni": "Gelişim kitapları sevenler için ideal. Anlatımı sade.",
+      "YorumTarihi": "2025-07-08T15:15:00"
+    },
+    {
+      "Id": 3,
+      "KitapId": 3,
+      "YorumcuAdSoyad": "Ali Kara",
+      "YorumMetni": "Beğendim ama klasik tarz seven biri değilim, biraz sıkıcı geldi.",
+      "YorumTarihi": "2025-07-08T15:27:40"
+    },
+    {
+      "Id": 1,
+      "KitapId": 1,
+      "YorumcuAdSoyad": "Elif Yıldız",
+      "YorumMetni": "Şiirlerin dili çok sade ama duygular güçlüydü.",
+      "YorumTarihi": "2025-07-08T15:45:00"
+    },
+    {
+      "Id": 5,
+      "KitapId": 5,
+      "YorumcuAdSoyad": "Zeynep Öz",
+      "YorumMetni": "İlk kitaba göre biraz daha karanlık ve yoğun, ama etkileyici.",
+      "YorumTarihi": "2025-07-08T16:00:00"
+    },
+    {
+      "Id": 6,
+      "KitapId": 6,
+      "YorumcuAdSoyad": "Yusuf Demir",
+      "YorumMetni": "Duygusal olarak yüklü bir kitap. Bazı yerleri sıkıcıydı.",
+      "YorumTarihi": "2025-07-08T16:10:00"
+    },
+    {
+      "Id": 7,
+      "KitapId": 7,
+      "YorumcuAdSoyad": "Merve Kurt",
+      "YorumMetni": "Konusu karışık gibi başlıyor ama sonlara doğru toparlanıyor.",
+      "YorumTarihi": "2025-07-08T16:25:00"
+    },
+    {
+      "Id": 8,
+      "KitapId": 8,
+      "YorumcuAdSoyad": "Arda Şimşek",
+      "YorumMetni": "Hayal gücü dolu, içsel yolculuk gibi bir roman.",
+      "YorumTarihi": "2025-07-08T16:35:00"
+    },
+    {
+      "Id": 9,
+      "KitapId": 9,
+      "YorumcuAdSoyad": "Sena Demir",
+      "YorumMetni": "Veri bilimi giriş için güzel ama bazı yerler yüzeysel kalmış.",
+      "YorumTarihi": "2025-07-08T16:45:00"
+    },
+    {
+      "Id": 10,
+      "KitapId": 10,
+      "YorumcuAdSoyad": "Burak Altun",
+      "YorumMetni": "Psikolojik derinliği güçlü, bazı bölümler ağırdı ama güzeldi.",
+      "YorumTarihi": "2025-07-08T17:00:00"
+    },
+    {
+      "Id": 11,
+      "KitapId": 11,
+      "YorumcuAdSoyad": "Nisa Tuncel",
+      "YorumMetni": "Teknolojiyle etiği aynı potada eritmiş, düşündürücüydü.",
+      "YorumTarihi": "2025-07-08T17:10:00"
+    },
+    {
+      "Id": 12,
+      "KitapId": 12,
+      "YorumcuAdSoyad": "Eren Başar",
+      "YorumMetni": "Aşk temalı ama klişelerden uzak. Özellikle finali başarılıydı.",
+      "YorumTarihi": "2025-07-08T17:20:00"
+    },
+    {
+      "Id": 13,
+      "KitapId": 13,
+      "YorumcuAdSoyad": "Hilal Şahin",
+      "YorumMetni": "Polisiye sevenler için sürükleyici. Olaylar güzel işlenmiş.",
+      "YorumTarihi": "2025-07-08T17:30:00"
+    }
 ]
