@@ -15,11 +15,22 @@ namespace readLog
 
         public static List<Book> Load()
         {
-            if (!File.Exists(FilePath))
-                return new List<Book>();
+            try
+            {
+                if (!File.Exists(FilePath))
+                    return new List<Book>();
 
-            string json = File.ReadAllText(FilePath);
-            return JsonConvert.DeserializeObject<List<Book>>(json) ?? new List<Book>();
+                string json = File.ReadAllText(FilePath);
+                if (string.IsNullOrWhiteSpace(json))
+                    return new List<Book>();
+
+                return JsonConvert.DeserializeObject<List<Book>>(json) ?? new List<Book>();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Veriler yüklenirken hata oluştu:\n" + ex.Message, "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return new List<Book>();
+            }
         }
 
         public static void Save(List<Book> books)

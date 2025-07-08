@@ -1,0 +1,16 @@
+[
+  {
+    "Id": 1,
+    "KitapId": 1,
+    "YorumcuAdSoyad": "Şevval Balıkcı",
+    "YorumMetni": "Çok güzeldi , tavsiye ederim herkese.",
+    "YorumTarihi": "2025-07-08T14:49:59.9825569+03:00"
+  },
+  {
+    "Id": 2,
+    "KitapId": 1,
+    "YorumcuAdSoyad": "Ali Kara",
+    "YorumMetni": "beğendim ama çok fazla klasik seven biri değilim.",
+    "YorumTarihi": "2025-07-08T15:27:40.9934427+03:00"
+  }
+]

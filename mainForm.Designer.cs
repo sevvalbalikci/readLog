@@ -55,6 +55,8 @@
             lblBaslangic = new Label();
             lblBitisTarihi = new Label();
             btnGuncelle = new Button();
+            btnYorumEkle = new Button();
+            btnYorumlarıGor = new Button();
             ((System.ComponentModel.ISupportInitialize)dgvKitaplar).BeginInit();
             ((System.ComponentModel.ISupportInitialize)nudSayfaSayisi).BeginInit();
             SuspendLayout();
@@ -73,7 +75,7 @@
             // 
             lblAd.AutoSize = true;
             lblAd.Font = new Font("Goudy Old Style", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblAd.Location = new Point(49, 136);
+            lblAd.Location = new Point(70, 136);
             lblAd.Name = "lblAd";
             lblAd.Size = new Size(123, 28);
             lblAd.TabIndex = 1;
@@ -84,7 +86,7 @@
             // 
             lblYazar.AutoSize = true;
             lblYazar.Font = new Font("Goudy Old Style", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblYazar.Location = new Point(26, 184);
+            lblYazar.Location = new Point(47, 184);
             lblYazar.Name = "lblYazar";
             lblYazar.Size = new Size(146, 28);
             lblYazar.TabIndex = 2;
@@ -95,7 +97,7 @@
             // 
             lblTur.AutoSize = true;
             lblTur.Font = new Font("Goudy Old Style", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblTur.Location = new Point(36, 235);
+            lblTur.Location = new Point(57, 235);
             lblTur.Name = "lblTur";
             lblTur.Size = new Size(136, 28);
             lblTur.TabIndex = 3;
@@ -105,7 +107,7 @@
             // 
             lblSayfaSayisi.AutoSize = true;
             lblSayfaSayisi.Font = new Font("Goudy Old Style", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblSayfaSayisi.Location = new Point(39, 286);
+            lblSayfaSayisi.Location = new Point(60, 286);
             lblSayfaSayisi.Name = "lblSayfaSayisi";
             lblSayfaSayisi.Size = new Size(133, 28);
             lblSayfaSayisi.TabIndex = 4;
@@ -116,7 +118,7 @@
             // 
             lblOkunduMu.AutoSize = true;
             lblOkunduMu.Font = new Font("Goudy Old Style", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblOkunduMu.Location = new Point(84, 345);
+            lblOkunduMu.Location = new Point(105, 345);
             lblOkunduMu.Name = "lblOkunduMu";
             lblOkunduMu.Size = new Size(122, 25);
             lblOkunduMu.TabIndex = 5;
@@ -126,7 +128,7 @@
             // 
             lblFavoriMi.AutoSize = true;
             lblFavoriMi.Font = new Font("Goudy Old Style", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblFavoriMi.Location = new Point(237, 345);
+            lblFavoriMi.Location = new Point(258, 345);
             lblFavoriMi.Name = "lblFavoriMi";
             lblFavoriMi.Size = new Size(96, 25);
             lblFavoriMi.TabIndex = 6;
@@ -137,7 +139,7 @@
             // 
             txtAd.BackColor = SystemColors.Info;
             txtAd.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 162);
-            txtAd.Location = new Point(188, 137);
+            txtAd.Location = new Point(209, 137);
             txtAd.Name = "txtAd";
             txtAd.Size = new Size(155, 33);
             txtAd.TabIndex = 7;
@@ -146,7 +148,7 @@
             // 
             txtYazar.BackColor = SystemColors.Info;
             txtYazar.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 162);
-            txtYazar.Location = new Point(188, 184);
+            txtYazar.Location = new Point(209, 184);
             txtYazar.Name = "txtYazar";
             txtYazar.Size = new Size(155, 33);
             txtYazar.TabIndex = 8;
@@ -155,7 +157,7 @@
             // 
             txtTur.BackColor = SystemColors.Info;
             txtTur.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 162);
-            txtTur.Location = new Point(188, 235);
+            txtTur.Location = new Point(209, 235);
             txtTur.Name = "txtTur";
             txtTur.Size = new Size(155, 33);
             txtTur.TabIndex = 9;
@@ -206,13 +208,14 @@
             dgvKitaplar.RowsDefaultCellStyle = dataGridViewCellStyle5;
             dgvKitaplar.Size = new Size(755, 375);
             dgvKitaplar.TabIndex = 13;
+            dgvKitaplar.CellContentClick += dgvKitaplar_CellContentClick;
             // 
             // btnKitapEkle
             // 
             btnKitapEkle.BackColor = Color.FromArgb(64, 0, 0);
             btnKitapEkle.FlatStyle = FlatStyle.Flat;
             btnKitapEkle.Font = new Font("Goudy Old Style", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnKitapEkle.Location = new Point(84, 491);
+            btnKitapEkle.Location = new Point(105, 491);
             btnKitapEkle.Name = "btnKitapEkle";
             btnKitapEkle.Size = new Size(187, 52);
             btnKitapEkle.TabIndex = 14;
@@ -225,7 +228,7 @@
             chkFavoriMi.BackColor = Color.Maroon;
             chkFavoriMi.Font = new Font("Segoe UI", 26.25F, FontStyle.Regular, GraphicsUnit.Point, 162);
             chkFavoriMi.ForeColor = SystemColors.Info;
-            chkFavoriMi.Location = new Point(216, 349);
+            chkFavoriMi.Location = new Point(237, 349);
             chkFavoriMi.Name = "chkFavoriMi";
             chkFavoriMi.Size = new Size(15, 14);
             chkFavoriMi.TabIndex = 16;
@@ -235,7 +238,7 @@
             // 
             nudSayfaSayisi.BackColor = SystemColors.Info;
             nudSayfaSayisi.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 162);
-            nudSayfaSayisi.Location = new Point(188, 286);
+            nudSayfaSayisi.Location = new Point(209, 286);
             nudSayfaSayisi.Maximum = new decimal(new int[] { 1000, 0, 0, 0 });
             nudSayfaSayisi.Name = "nudSayfaSayisi";
             nudSayfaSayisi.Size = new Size(155, 33);
@@ -246,7 +249,7 @@
             chkOkunduMu.AutoSize = true;
             chkOkunduMu.Font = new Font("Segoe UI", 48F, FontStyle.Regular, GraphicsUnit.Point, 162);
             chkOkunduMu.ForeColor = Color.LemonChiffon;
-            chkOkunduMu.Location = new Point(63, 349);
+            chkOkunduMu.Location = new Point(84, 349);
             chkOkunduMu.Name = "chkOkunduMu";
             chkOkunduMu.Size = new Size(15, 14);
             chkOkunduMu.TabIndex = 18;
@@ -259,7 +262,7 @@
             btnSil.FlatStyle = FlatStyle.Flat;
             btnSil.Font = new Font("Goudy Old Style", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnSil.ForeColor = SystemColors.Info;
-            btnSil.Location = new Point(664, 527);
+            btnSil.Location = new Point(664, 529);
             btnSil.Name = "btnSil";
             btnSil.Size = new Size(132, 47);
             btnSil.TabIndex = 19;
@@ -272,7 +275,7 @@
             btnDuzenle.BackColor = Color.FromArgb(64, 0, 0);
             btnDuzenle.FlatStyle = FlatStyle.Flat;
             btnDuzenle.Font = new Font("Goudy Old Style", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnDuzenle.Location = new Point(388, 527);
+            btnDuzenle.Location = new Point(388, 529);
             btnDuzenle.Name = "btnDuzenle";
             btnDuzenle.Size = new Size(132, 47);
             btnDuzenle.TabIndex = 20;
@@ -288,7 +291,7 @@
             dtpBaslangicTarihi.CalendarTitleBackColor = SystemColors.Info;
             dtpBaslangicTarihi.Font = new Font("Goudy Old Style", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             dtpBaslangicTarihi.Format = DateTimePickerFormat.Short;
-            dtpBaslangicTarihi.Location = new Point(199, 392);
+            dtpBaslangicTarihi.Location = new Point(220, 392);
             dtpBaslangicTarihi.Name = "dtpBaslangicTarihi";
             dtpBaslangicTarihi.Size = new Size(129, 27);
             dtpBaslangicTarihi.TabIndex = 22;
@@ -298,7 +301,7 @@
             dtpBitisTarihi.CalendarFont = new Font("Goudy Old Style", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             dtpBitisTarihi.Font = new Font("Goudy Old Style", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             dtpBitisTarihi.Format = DateTimePickerFormat.Short;
-            dtpBitisTarihi.Location = new Point(199, 433);
+            dtpBitisTarihi.Location = new Point(220, 433);
             dtpBitisTarihi.Name = "dtpBitisTarihi";
             dtpBitisTarihi.Size = new Size(129, 27);
             dtpBitisTarihi.TabIndex = 23;
@@ -307,7 +310,7 @@
             // 
             lblBaslangic.AutoSize = true;
             lblBaslangic.Font = new Font("Goudy Old Style", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblBaslangic.Location = new Point(20, 391);
+            lblBaslangic.Location = new Point(41, 391);
             lblBaslangic.Name = "lblBaslangic";
             lblBaslangic.Size = new Size(173, 28);
             lblBaslangic.TabIndex = 24;
@@ -318,7 +321,7 @@
             // 
             lblBitisTarihi.AutoSize = true;
             lblBitisTarihi.Font = new Font("Goudy Old Style", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblBitisTarihi.Location = new Point(25, 432);
+            lblBitisTarihi.Location = new Point(46, 432);
             lblBitisTarihi.Name = "lblBitisTarihi";
             lblBitisTarihi.Size = new Size(168, 28);
             lblBitisTarihi.TabIndex = 25;
@@ -330,19 +333,46 @@
             btnGuncelle.BackColor = Color.FromArgb(64, 0, 0);
             btnGuncelle.FlatStyle = FlatStyle.Flat;
             btnGuncelle.Font = new Font("Goudy Old Style", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnGuncelle.Location = new Point(526, 527);
+            btnGuncelle.Location = new Point(526, 529);
             btnGuncelle.Name = "btnGuncelle";
             btnGuncelle.Size = new Size(132, 47);
             btnGuncelle.TabIndex = 26;
             btnGuncelle.Text = "Güncelle";
             btnGuncelle.UseVisualStyleBackColor = false;
             // 
+            // btnYorumEkle
+            // 
+            btnYorumEkle.BackColor = Color.FromArgb(64, 0, 0);
+            btnYorumEkle.FlatStyle = FlatStyle.Flat;
+            btnYorumEkle.Font = new Font("Goudy Old Style", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnYorumEkle.Location = new Point(802, 529);
+            btnYorumEkle.Name = "btnYorumEkle";
+            btnYorumEkle.Size = new Size(155, 47);
+            btnYorumEkle.TabIndex = 27;
+            btnYorumEkle.Text = "Yorum Ekle";
+            btnYorumEkle.UseVisualStyleBackColor = false;
+            btnYorumEkle.Click += btnYorumEkle_Click;
+            // 
+            // btnYorumlarıGor
+            // 
+            btnYorumlarıGor.BackColor = Color.FromArgb(64, 0, 0);
+            btnYorumlarıGor.FlatStyle = FlatStyle.Flat;
+            btnYorumlarıGor.Font = new Font("Goudy Old Style", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnYorumlarıGor.Location = new Point(963, 529);
+            btnYorumlarıGor.Name = "btnYorumlarıGor";
+            btnYorumlarıGor.Size = new Size(180, 47);
+            btnYorumlarıGor.TabIndex = 28;
+            btnYorumlarıGor.Text = "Yorumları Gör";
+            btnYorumlarıGor.UseVisualStyleBackColor = false;
+            // 
             // mainForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Maroon;
-            ClientSize = new Size(1180, 629);
+            ClientSize = new Size(1192, 649);
+            Controls.Add(btnYorumlarıGor);
+            Controls.Add(btnYorumEkle);
             Controls.Add(btnGuncelle);
             Controls.Add(lblBitisTarihi);
             Controls.Add(lblBaslangic);
@@ -399,5 +429,7 @@
         private Label lblBaslangic;
         private Label lblBitisTarihi;
         private Button btnGuncelle;
+        private Button btnYorumEkle;
+        private Button btnYorumlarıGor;
     }
 }

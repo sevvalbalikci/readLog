@@ -33,18 +33,7 @@
     "OkumaBitisTarihi": "2025-08-30T00:00:00"
   },
   {
-    "Id": 4,
-    "Ad": "Süt Ve Bal",
-    "Yazar": "Rupi Kaur",
-    "Tur": "Şiir",
-    "SayfaSayisi": 150,
-    "OkunduMu": true,
-    "FavoriMi": true,
-    "OkumaBaslangicTarihi": "2025-03-12T09:36:21.121",
-    "OkumaBitisTarihi": "2025-03-30T09:36:21.121"
-  },
-  {
-    "Id": 6,
+    "Id": 5,
     "Ad": "Seyir 2",
     "Yazar": "Piraye",
     "Tur": "Roman",
@@ -55,7 +44,7 @@
     "OkumaBitisTarihi": "2025-07-07T17:43:34.6621421+03:00"
   },
   {
-    "Id": 7,
+    "Id": 6,
     "Ad": "Süt Ve Bal",
     "Yazar": "Ali Kara",
     "Tur": "Şiir",
@@ -64,5 +53,27 @@
     "FavoriMi": false,
     "OkumaBaslangicTarihi": "2025-08-18T09:36:21.121",
     "OkumaBitisTarihi": "2025-08-28T17:49:03.479"
+  },
+  {
+    "Id": 7,
+    "Ad": "Gece Yolcuları",
+    "Yazar": "Vh",
+    "Tur": "",
+    "SayfaSayisi": 435,
+    "OkunduMu": false,
+    "FavoriMi": false,
+    "OkumaBaslangicTarihi": "2025-07-08T15:15:34.138",
+    "OkumaBitisTarihi": "2025-07-08T15:15:34.138"
+  },
+  {
+    "Id": 8,
+    "Ad": "Fccn",
+    "Yazar": "Gbnv",
+    "Tur": "Cghn",
+    "SayfaSayisi": 50,
+    "OkunduMu": false,
+    "FavoriMi": false,
+    "OkumaBaslangicTarihi": "2025-06-01T15:23:12.122",
+    "OkumaBitisTarihi": "2025-07-08T15:23:12.1253442+03:00"
   }
 ]

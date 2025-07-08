@@ -47,7 +47,7 @@ namespace readLog
             dgvKitaplar.MultiSelect = false;
             dgvKitaplar.SelectionChanged += dgvKitaplar_SelectionChanged;
 
-
+            dgvKitaplar.Columns[nameof(Book.Id)].HeaderText = "Kitap ID";
             dgvKitaplar.Columns[nameof(Book.Ad)].HeaderText = "Kitap Adı";
             dgvKitaplar.Columns[nameof(Book.Yazar)].HeaderText = "Yazar";
             dgvKitaplar.Columns[nameof(Book.Tur)].HeaderText = "Tür";
@@ -57,21 +57,41 @@ namespace readLog
             dgvKitaplar.Columns[nameof(Book.OkumaBaslangicTarihi)].HeaderText = "Başlama Tarihi";
             dgvKitaplar.Columns[nameof(Book.OkumaBitisTarihi)].HeaderText = "Bitirme Tarihi";
 
-            if (dgvKitaplar.Columns.Contains(nameof(Book.Id)))
-            {
-                dgvKitaplar.Columns[nameof(Book.Id)].Visible = false;
-            }
+            dgvKitaplar.Columns[nameof(Book.Id)].Visible = true;
         }
 
         private void btnKitapEkle_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(txtAd.Text) ||
-                string.IsNullOrWhiteSpace(txtYazar.Text))
+            if (string.IsNullOrWhiteSpace(txtAd.Text))
             {
-                MessageBox.Show("Lütfen kitap adı ve yazar girin.",
-                                "Eksik Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Lütfen kitap adını girin.", "Eksik Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
+
+            if (string.IsNullOrWhiteSpace(txtYazar.Text))
+            {
+                MessageBox.Show("Lütfen yazar adını girin.", "Eksik Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            if (string.IsNullOrWhiteSpace(txtTur.Text))
+            {
+                MessageBox.Show("Lütfen kitap türünü girin.", "Eksik Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            if (nudSayfaSayisi.Value <= 0)
+            {
+                MessageBox.Show("Lütfen sayfa sayısını 1 veya daha fazla olarak girin.", "Eksik Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            if (dtpBitisTarihi.Value < dtpBaslangicTarihi.Value)
+            {
+                MessageBox.Show("Bitiş tarihi, başlangıç tarihinden küçük olamaz.", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
 
             var yeniKitap = new Book
             {
@@ -187,8 +207,9 @@ namespace readLog
 
         private void LoadBooksIntoDataGridView()
         {
-            dgvKitaplar.DataSource = null;
-            dgvKitaplar.DataSource = kitaplar;
+            var siraliKitaplar = new BindingList<Book>(kitaplar.OrderBy(k => k.Ad).ToList());
+            dgvKitaplar.DataSource = siraliKitaplar;
+
         }
 
         private void SetInitialButtonStates()
@@ -203,7 +224,7 @@ namespace readLog
 
         private void btnGuncelle_Click(object sender, EventArgs e)
         {
-            
+
             if (editMode)
             {
                 MessageBox.Show("Lütfen önce 'Düzenle' işlemini tamamlayın veya iptal edin.",
@@ -211,7 +232,7 @@ namespace readLog
                 return;
             }
 
-            if (!updateAndAddMode) 
+            if (!updateAndAddMode)
             {
                 if (seciliKitap == null)
                 {
@@ -232,7 +253,7 @@ namespace readLog
                 updateAndAddMode = true;
                 btnGuncelle.Text = "Yeni Kaydet";
             }
-            else 
+            else
             {
                 if (string.IsNullOrWhiteSpace(txtAd.Text) ||
                     string.IsNullOrWhiteSpace(txtYazar.Text))
@@ -244,7 +265,7 @@ namespace readLog
 
                 var yeniKitap = new Book
                 {
-                    Id = kitapSayaci, 
+                    Id = kitapSayaci,
                     Ad = TextHelper.ToProperCase(txtAd.Text.Trim()),
                     Yazar = TextHelper.ToProperCase(txtYazar.Text.Trim()),
                     Tur = TextHelper.ToProperCase(txtTur.Text.Trim()),
@@ -256,7 +277,7 @@ namespace readLog
                 };
 
                 kitaplar.Add(yeniKitap);
-                kitapSayaci++; 
+                kitapSayaci++;
 
                 BookService.Save(kitaplar.ToList());
 
@@ -266,6 +287,37 @@ namespace readLog
             }
         }
 
+        private void btnYorumEkle_Click(object sender, EventArgs e)
+        {
+            if (dgvKitaplar.CurrentRow == null)
+            {
+                MessageBox.Show("Lütfen önce bir kitap seçin.", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            if (dgvKitaplar.CurrentRow?.DataBoundItem is Book seciliKitap)
+            {
+                int kitapId = seciliKitap.Id;
+
+                if (kitapId <= 0)
+                {
+                    MessageBox.Show("Seçilen kitabın geçerli bir ID'si yok.", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                CommentForm yorumForm = new CommentForm(kitapId);
+                yorumForm.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Lütfen önce bir kitap seçin.", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void btnYorumlarıGor_Click(object sender, EventArgs e)
+        {
+
+        }
 
         private void label5_Click(object sender, EventArgs e) { }
         private void lblAd_Click(object sender, EventArgs e) { }
@@ -273,6 +325,6 @@ namespace readLog
         private void lblFavoriMi_Click(object sender, EventArgs e) { }
         private void label1_Click(object sender, EventArgs e) { }
         private void lblBitisTarihi_Click(object sender, EventArgs e) { }
-
+        private void dgvKitaplar_CellContentClick(object sender, DataGridViewCellEventArgs e){ }
     }
 }
