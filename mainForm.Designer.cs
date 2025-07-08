@@ -54,6 +54,7 @@
             dtpBitisTarihi = new DateTimePicker();
             lblBaslangic = new Label();
             lblBitisTarihi = new Label();
+            btnGuncelle = new Button();
             ((System.ComponentModel.ISupportInitialize)dgvKitaplar).BeginInit();
             ((System.ComponentModel.ISupportInitialize)nudSayfaSayisi).BeginInit();
             SuspendLayout();
@@ -203,7 +204,7 @@
             dataGridViewCellStyle5.SelectionBackColor = SystemColors.Info;
             dataGridViewCellStyle5.SelectionForeColor = Color.FromArgb(64, 0, 0);
             dgvKitaplar.RowsDefaultCellStyle = dataGridViewCellStyle5;
-            dgvKitaplar.Size = new Size(717, 375);
+            dgvKitaplar.Size = new Size(755, 375);
             dgvKitaplar.TabIndex = 13;
             // 
             // btnKitapEkle
@@ -258,7 +259,7 @@
             btnSil.FlatStyle = FlatStyle.Flat;
             btnSil.Font = new Font("Goudy Old Style", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnSil.ForeColor = SystemColors.Info;
-            btnSil.Location = new Point(526, 527);
+            btnSil.Location = new Point(664, 527);
             btnSil.Name = "btnSil";
             btnSil.Size = new Size(132, 47);
             btnSil.TabIndex = 19;
@@ -324,12 +325,25 @@
             lblBitisTarihi.Text = "Bitirme Tarihi :";
             lblBitisTarihi.Click += lblBitisTarihi_Click;
             // 
+            // btnGuncelle
+            // 
+            btnGuncelle.BackColor = Color.FromArgb(64, 0, 0);
+            btnGuncelle.FlatStyle = FlatStyle.Flat;
+            btnGuncelle.Font = new Font("Goudy Old Style", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnGuncelle.Location = new Point(526, 527);
+            btnGuncelle.Name = "btnGuncelle";
+            btnGuncelle.Size = new Size(132, 47);
+            btnGuncelle.TabIndex = 26;
+            btnGuncelle.Text = "Güncelle";
+            btnGuncelle.UseVisualStyleBackColor = false;
+            // 
             // mainForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Maroon;
-            ClientSize = new Size(1137, 665);
+            ClientSize = new Size(1180, 629);
+            Controls.Add(btnGuncelle);
             Controls.Add(lblBitisTarihi);
             Controls.Add(lblBaslangic);
             Controls.Add(dtpBitisTarihi);
@@ -384,5 +398,6 @@
         private DateTimePicker dtpBitisTarihi;
         private Label lblBaslangic;
         private Label lblBitisTarihi;
+        private Button btnGuncelle;
     }
 }

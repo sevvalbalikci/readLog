@@ -1,8 +1,9 @@
 [
   {
-    "Ad": "çalıkuşu",
-    "Yazar": "reşat nuri güntekin",
-    "Tur": "edebiyat",
+    "Id": 1,
+    "Ad": "Çalıkuşu",
+    "Yazar": "Reşat Nuri Güntekin",
+    "Tur": "Edebiyat",
     "SayfaSayisi": 550,
     "OkunduMu": true,
     "FavoriMi": true,
@@ -10,16 +11,18 @@
     "OkumaBitisTarihi": "2025-05-30T15:18:35.523"
   },
   {
+    "Id": 2,
     "Ad": "Pes Etme Mucizeler Yolda",
     "Yazar": "Kinsun",
     "Tur": "Kişisel Gelişim",
-    "SayfaSayisi": 211,
+    "SayfaSayisi": 215,
     "OkunduMu": false,
     "FavoriMi": false,
     "OkumaBaslangicTarihi": "2025-08-01T16:26:50.822",
     "OkumaBitisTarihi": "2025-08-10T16:26:50.815"
   },
   {
+    "Id": 3,
     "Ad": "Seyir",
     "Yazar": "Piraye",
     "Tur": "Roman",
@@ -28,5 +31,38 @@
     "FavoriMi": false,
     "OkumaBaslangicTarihi": "2025-08-12T00:00:00",
     "OkumaBitisTarihi": "2025-08-30T00:00:00"
+  },
+  {
+    "Id": 4,
+    "Ad": "Süt Ve Bal",
+    "Yazar": "Rupi Kaur",
+    "Tur": "Şiir",
+    "SayfaSayisi": 150,
+    "OkunduMu": true,
+    "FavoriMi": true,
+    "OkumaBaslangicTarihi": "2025-03-12T09:36:21.121",
+    "OkumaBitisTarihi": "2025-03-30T09:36:21.121"
+  },
+  {
+    "Id": 6,
+    "Ad": "Seyir 2",
+    "Yazar": "Piraye",
+    "Tur": "Roman",
+    "SayfaSayisi": 446,
+    "OkunduMu": true,
+    "FavoriMi": false,
+    "OkumaBaslangicTarihi": "2025-08-12T00:00:00",
+    "OkumaBitisTarihi": "2025-07-07T17:43:34.6621421+03:00"
+  },
+  {
+    "Id": 7,
+    "Ad": "Süt Ve Bal",
+    "Yazar": "Ali Kara",
+    "Tur": "Şiir",
+    "SayfaSayisi": 350,
+    "OkunduMu": true,
+    "FavoriMi": false,
+    "OkumaBaslangicTarihi": "2025-08-18T09:36:21.121",
+    "OkumaBitisTarihi": "2025-08-28T17:49:03.479"
   }
 ]

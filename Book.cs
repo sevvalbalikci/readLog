@@ -8,6 +8,8 @@ namespace readLog
 {
     public class Book
     {
+        public int Id { get; set; }
+
         public string Ad { get; set; }
         public string Yazar { get; set; }
         public string Tur { get; set; }
@@ -17,6 +19,7 @@ namespace readLog
 
         public DateTime? OkumaBaslangicTarihi { get; set; }
         public DateTime? OkumaBitisTarihi { get; set; }
+
     }
 
 }
