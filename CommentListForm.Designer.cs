@@ -40,7 +40,7 @@
             lblKitapId.AutoSize = true;
             lblKitapId.Font = new Font("Goudy Old Style", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblKitapId.ForeColor = SystemColors.Info;
-            lblKitapId.Location = new Point(64, 116);
+            lblKitapId.Location = new Point(53, 108);
             lblKitapId.Name = "lblKitapId";
             lblKitapId.Size = new Size(150, 25);
             lblKitapId.TabIndex = 0;
@@ -53,7 +53,7 @@
             cmbKitapId.Font = new Font("Goudy Old Style", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             cmbKitapId.ForeColor = Color.FromArgb(64, 0, 0);
             cmbKitapId.FormattingEnabled = true;
-            cmbKitapId.Location = new Point(220, 116);
+            cmbKitapId.Location = new Point(209, 108);
             cmbKitapId.Name = "cmbKitapId";
             cmbKitapId.Size = new Size(144, 31);
             cmbKitapId.TabIndex = 1;
@@ -64,7 +64,7 @@
             lstYorumlar.Font = new Font("Goudy Old Style", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lstYorumlar.ForeColor = SystemColors.Info;
             lstYorumlar.FormattingEnabled = true;
-            lstYorumlar.Location = new Point(65, 184);
+            lstYorumlar.Location = new Point(51, 162);
             lstYorumlar.Name = "lstYorumlar";
             lstYorumlar.Size = new Size(634, 372);
             lstYorumlar.TabIndex = 2;
@@ -76,7 +76,7 @@
             btnCikis.FlatStyle = FlatStyle.Flat;
             btnCikis.Font = new Font("Goudy Old Style", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnCikis.ForeColor = SystemColors.Info;
-            btnCikis.Location = new Point(550, 592);
+            btnCikis.Location = new Point(536, 570);
             btnCikis.Name = "btnCikis";
             btnCikis.Size = new Size(127, 46);
             btnCikis.TabIndex = 3;
@@ -100,7 +100,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Maroon;
-            ClientSize = new Size(780, 697);
+            ClientSize = new Size(734, 639);
             Controls.Add(label1);
             Controls.Add(btnCikis);
             Controls.Add(lstYorumlar);

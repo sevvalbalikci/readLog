@@ -19,21 +19,29 @@ namespace readLog
             InitializeComponent();
             this.Text = "Yorumları Görüntüle";
             yorumlar = CommentService.Yukle();
+            var kitaplar = BookService.Load();
 
-
-            var kitapIdler = yorumlar
-                .Select(y => y.KitapId)
+            var kitapIdler = kitaplar
+                            .Select(k => k.Id)
                 .Distinct()
                 .OrderBy(id => id)
                 .ToList();
             cmbKitapId.DataSource = kitapIdler;
 
             cmbKitapId.SelectedIndexChanged += CmbKitapId_SelectedIndexChanged;
+
             btnCikis.Click += (s, e) => this.Close();
         }
 
         private void CmbKitapId_SelectedIndexChanged(object sender, EventArgs e)
         {
+            if (cmbKitapId.SelectedItem == null)
+            {
+                lstYorumlar.Items.Clear();
+                lstYorumlar.Items.Add("Lütfen kitap seçiniz.");
+                return;
+            }
+
             if (cmbKitapId.SelectedItem is int secilenId)
             {
                 lstYorumlar.Items.Clear();
@@ -58,14 +66,22 @@ namespace readLog
 
         private void CommentListForm_Load(object sender, EventArgs e)
         {
-            YorumlariYukle();
+            if (cmbKitapId.SelectedIndex >= 0)
+            {
+                YorumlariYukle();
+            }
+            else
+            {
+                lstYorumlar.Items.Clear();
+            }
         }
 
         private void YorumlariYukle()
         {
-            lstYorumlar.Items.Clear(); 
+            lstYorumlar.Items.Clear();
 
-            var yorumlar = CommentService.Yukle();
+            if (cmbKitapId.SelectedIndex == null)
+                return;
 
             int secilenKitapId = (int)cmbKitapId.SelectedItem;
 
@@ -93,5 +109,8 @@ namespace readLog
                 MessageBox.Show(secilenYorum, "Yorum Detayı", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
+
+
+
     }
 }

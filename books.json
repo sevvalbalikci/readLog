@@ -55,17 +55,6 @@
     "OkumaBitisTarihi": "2025-08-28T17:49:03.479"
   },
   {
-    "Id": 7,
-    "Ad": "Gece Yolcuları",
-    "Yazar": "Vh",
-    "Tur": "",
-    "SayfaSayisi": 435,
-    "OkunduMu": false,
-    "FavoriMi": false,
-    "OkumaBaslangicTarihi": "2025-07-08T15:15:34.138",
-    "OkumaBitisTarihi": "2025-07-08T15:15:34.138"
-  },
-  {
     "Id": 8,
     "Ad": "Gökyüzüne Tutunmak",
     "Yazar": "Elif Kaya",
@@ -130,5 +119,16 @@
     "FavoriMi": false,
     "OkumaBaslangicTarihi": "2025-08-05T19:30:00",
     "OkumaBitisTarihi": "2025-08-20T20:00:00"
+  },
+  {
+    "Id": 14,
+    "Ad": "Seyir 3",
+    "Yazar": "Piraye",
+    "Tur": "Roman",
+    "SayfaSayisi": 400,
+    "OkunduMu": true,
+    "FavoriMi": false,
+    "OkumaBaslangicTarihi": "2025-08-12T00:00:00",
+    "OkumaBitisTarihi": "2025-07-08T21:36:24.202848+03:00"
   }
 ]

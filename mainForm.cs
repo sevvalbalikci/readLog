@@ -27,7 +27,9 @@ namespace readLog
             btnKitapEkle.Click += btnKitapEkle_Click;
             btnSil.Click += btnSil_Click;
             btnGuncelle.Click += btnGuncelle_Click;
+            btnYorumlariGor.Click -= btnYorumlariGor_Click_1;
             btnYorumlariGor.Click += btnYorumlariGor_Click_1;
+
         }
 
         private void MainForm_Load(object sender, EventArgs e)
@@ -327,8 +329,10 @@ namespace readLog
 
         private void btnYorumlariGor_Click_1(object sender, EventArgs e)
         {
-            CommentListForm yorumForm = new CommentListForm();
-            yorumForm.ShowDialog();
+            using (var yorumForm = new CommentListForm())
+            {
+                yorumForm.ShowDialog();
+            }
         }
     }
 }
