@@ -23,6 +23,7 @@ namespace readLog
         public mainForm()
         {
             InitializeComponent();
+            this.Text = "Kütüphane Yönetim Sistemi";
             this.Load += MainForm_Load;
             btnKitapEkle.Click += btnKitapEkle_Click;
             btnSil.Click += btnSil_Click;
@@ -44,13 +45,13 @@ namespace readLog
 
 
             dgvKitaplar.DataSource = kitaplar;
-            dgvKitaplar.AutoGenerateColumns = true;
+            dgvKitaplar.AutoGenerateColumns = false;
 
             dgvKitaplar.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgvKitaplar.MultiSelect = false;
             dgvKitaplar.SelectionChanged += dgvKitaplar_SelectionChanged;
 
-            dgvKitaplar.Columns[nameof(Book.Id)].HeaderText = "Kitap ID";
+            dgvKitaplar.Columns[nameof(Book.Id)].Visible = false;
             dgvKitaplar.Columns[nameof(Book.Ad)].HeaderText = "Kitap Adı";
             dgvKitaplar.Columns[nameof(Book.Yazar)].HeaderText = "Yazar";
             dgvKitaplar.Columns[nameof(Book.Tur)].HeaderText = "Tür";
@@ -60,7 +61,6 @@ namespace readLog
             dgvKitaplar.Columns[nameof(Book.OkumaBaslangicTarihi)].HeaderText = "Başlama Tarihi";
             dgvKitaplar.Columns[nameof(Book.OkumaBitisTarihi)].HeaderText = "Bitirme Tarihi";
 
-            dgvKitaplar.Columns[nameof(Book.Id)].Visible = true;
         }
 
         private void btnKitapEkle_Click(object sender, EventArgs e)
@@ -322,17 +322,36 @@ namespace readLog
         private void label5_Click(object sender, EventArgs e) { }
         private void lblAd_Click(object sender, EventArgs e) { }
         private void lblYazar_Click(object sender, EventArgs e) { }
-        private void lblFavoriMi_Click(object sender, EventArgs e) { }
         private void label1_Click(object sender, EventArgs e) { }
         private void lblBitisTarihi_Click(object sender, EventArgs e) { }
         private void dgvKitaplar_CellContentClick(object sender, DataGridViewCellEventArgs e) { }
 
         private void btnYorumlariGor_Click_1(object sender, EventArgs e)
         {
-            using (var yorumForm = new CommentListForm())
+            if (dgvKitaplar.CurrentRow == null)
             {
-                yorumForm.ShowDialog();
+                MessageBox.Show("Lütfen önce bir kitap seçin.", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            if (dgvKitaplar.CurrentRow?.DataBoundItem is Book seciliKitap)
+            {
+                int kitapId = seciliKitap.Id;
+
+                if (kitapId <= 0)
+                {
+                    MessageBox.Show("Seçilen kitabın geçerli bir ID'si yok.", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                CommentListForm yorumDisplayForm = new CommentListForm(kitapId);
+                yorumDisplayForm.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Lütfen önce bir kitap seçin.", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
+
     }
 }

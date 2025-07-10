@@ -130,5 +130,16 @@
     "FavoriMi": false,
     "OkumaBaslangicTarihi": "2025-08-12T00:00:00",
     "OkumaBitisTarihi": "2025-07-08T21:36:24.202848+03:00"
+  },
+  {
+    "Id": 15,
+    "Ad": "Beyaz Diş",
+    "Yazar": "Jack London",
+    "Tur": "Roman",
+    "SayfaSayisi": 315,
+    "OkunduMu": true,
+    "FavoriMi": true,
+    "OkumaBaslangicTarihi": "2025-07-03T13:15:28.44",
+    "OkumaBitisTarihi": "2025-07-10T13:15:28.4381931+03:00"
   }
 ]

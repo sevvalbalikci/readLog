@@ -13,88 +13,37 @@ namespace readLog
     public partial class CommentListForm : Form
     {
         private List<Comment> yorumlar;
-
-        public CommentListForm()
+        private readonly int kitapId;
+        public CommentListForm(int kitapId)
         {
             InitializeComponent();
             this.Text = "Yorumları Görüntüle";
+            this.kitapId = kitapId;
             yorumlar = CommentService.Yukle();
-            var kitaplar = BookService.Load();
-
-            var kitapIdler = kitaplar
-                            .Select(k => k.Id)
-                .Distinct()
-                .OrderBy(id => id)
-                .ToList();
-            cmbKitapId.DataSource = kitapIdler;
-
-            cmbKitapId.SelectedIndexChanged += CmbKitapId_SelectedIndexChanged;
-
+            YorumlariYukle();
             btnCikis.Click += (s, e) => this.Close();
         }
-
-        private void CmbKitapId_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (cmbKitapId.SelectedItem == null)
-            {
-                lstYorumlar.Items.Clear();
-                lstYorumlar.Items.Add("Lütfen kitap seçiniz.");
-                return;
-            }
-
-            if (cmbKitapId.SelectedItem is int secilenId)
-            {
-                lstYorumlar.Items.Clear();
-
-                var secilenYorumlar = yorumlar
-                    .Where(y => y.KitapId == secilenId)
-                    .OrderBy(y => y.YorumTarihi)
-                    .ToList();
-
-                if (!secilenYorumlar.Any())
-                {
-                    lstYorumlar.Items.Add("Bu kitap için henüz yorum yok.");
-                    return;
-                }
-
-                foreach (var yorum in secilenYorumlar)
-                {
-                    lstYorumlar.Items.Add($"[{yorum.YorumTarihi:G}] {yorum.YorumcuAdSoyad}: {yorum.YorumMetni}");
-                }
-            }
-        }
-
-        private void CommentListForm_Load(object sender, EventArgs e)
-        {
-            if (cmbKitapId.SelectedIndex >= 0)
-            {
-                YorumlariYukle();
-            }
-            else
-            {
-                lstYorumlar.Items.Clear();
-            }
-        }
-
         private void YorumlariYukle()
         {
             lstYorumlar.Items.Clear();
 
-            if (cmbKitapId.SelectedIndex == null)
+            if (yorumlar == null)
                 return;
 
-            int secilenKitapId = (int)cmbKitapId.SelectedItem;
-
             var filtreli = yorumlar
-                .Where(y => y.KitapId == secilenKitapId)
+                .Where(y => y.KitapId == this.kitapId)
                 .OrderBy(y => y.YorumTarihi)
                 .ToList();
 
             foreach (var yorum in filtreli)
             {
-                lstYorumlar.Items.Add($"{yorum.YorumcuAdSoyad}: {yorum.YorumMetni}");
+                var item = new ListViewItem(yorum.YorumcuAdSoyad);
+                item.SubItems.Add(yorum.YorumMetni);
+                lstYorumlar.Items.Add(item);
             }
         }
+
+
 
         private void btnCikis_Click(object sender, EventArgs e)
         {
@@ -103,13 +52,15 @@ namespace readLog
 
         private void lstYorumlar_Click(object sender, EventArgs e)
         {
-            if (lstYorumlar.SelectedItem != null)
+            if (lstYorumlar.SelectedItems.Count > 0)
             {
-                string secilenYorum = lstYorumlar.SelectedItem.ToString();
-                MessageBox.Show(secilenYorum, "Yorum Detayı", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                var secilen = lstYorumlar.SelectedItems[0];
+                string yorumcu = secilen.SubItems[0].Text;
+                string yorum = secilen.SubItems[1].Text;
+
+                MessageBox.Show($"{yorumcu}:\n\n{yorum}", "Yorum Detayı", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
-
 
 
     }

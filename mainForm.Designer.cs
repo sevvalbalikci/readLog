@@ -28,11 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle7 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle8 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle9 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle10 = new DataGridViewCellStyle();
+
+            string projeDizini = Directory.GetParent(AppDomain.CurrentDomain.BaseDirectory).Parent.Parent.Parent.FullName;
+            string ikonYolu = Path.Combine(projeDizini, "icon.ico");
+            this.Icon = new Icon(ikonYolu);
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
             lblBaslık = new Label();
             lblAd = new Label();
             lblYazar = new Label();
@@ -133,7 +137,6 @@
             lblFavoriMi.Size = new Size(96, 25);
             lblFavoriMi.TabIndex = 6;
             lblFavoriMi.Text = "Favori Mi";
-            lblFavoriMi.Click += lblFavoriMi_Click;
             // 
             // txtAd
             // 
@@ -165,47 +168,47 @@
             // dgvKitaplar
             // 
             dgvKitaplar.AllowUserToOrderColumns = true;
-            dataGridViewCellStyle6.BackColor = Color.FromArgb(64, 0, 0);
-            dataGridViewCellStyle6.ForeColor = SystemColors.Info;
-            dataGridViewCellStyle6.SelectionBackColor = SystemColors.Info;
-            dataGridViewCellStyle6.SelectionForeColor = Color.FromArgb(64, 0, 0);
-            dgvKitaplar.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle1.BackColor = Color.FromArgb(64, 0, 0);
+            dataGridViewCellStyle1.ForeColor = SystemColors.Info;
+            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Info;
+            dataGridViewCellStyle1.SelectionForeColor = Color.FromArgb(64, 0, 0);
+            dgvKitaplar.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             dgvKitaplar.BackgroundColor = Color.FromArgb(64, 0, 0);
-            dataGridViewCellStyle7.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = SystemColors.Control;
-            dataGridViewCellStyle7.Font = new Font("Goudy Old Style", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle7.ForeColor = Color.Black;
-            dataGridViewCellStyle7.SelectionBackColor = SystemColors.Info;
-            dataGridViewCellStyle7.SelectionForeColor = Color.FromArgb(64, 0, 0);
-            dataGridViewCellStyle7.WrapMode = DataGridViewTriState.True;
-            dgvKitaplar.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = SystemColors.Control;
+            dataGridViewCellStyle2.Font = new Font("Goudy Old Style", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle2.ForeColor = Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Info;
+            dataGridViewCellStyle2.SelectionForeColor = Color.FromArgb(64, 0, 0);
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
+            dgvKitaplar.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             dgvKitaplar.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle8.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = Color.FromArgb(64, 0, 0);
-            dataGridViewCellStyle8.Font = new Font("Goudy Old Style", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle8.ForeColor = SystemColors.Info;
-            dataGridViewCellStyle8.SelectionBackColor = SystemColors.Info;
-            dataGridViewCellStyle8.SelectionForeColor = Color.FromArgb(64, 0, 0);
-            dataGridViewCellStyle8.WrapMode = DataGridViewTriState.False;
-            dgvKitaplar.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = Color.FromArgb(64, 0, 0);
+            dataGridViewCellStyle3.Font = new Font("Goudy Old Style", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle3.ForeColor = SystemColors.Info;
+            dataGridViewCellStyle3.SelectionBackColor = SystemColors.Info;
+            dataGridViewCellStyle3.SelectionForeColor = Color.FromArgb(64, 0, 0);
+            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
+            dgvKitaplar.DefaultCellStyle = dataGridViewCellStyle3;
             dgvKitaplar.EditMode = DataGridViewEditMode.EditProgrammatically;
             dgvKitaplar.GridColor = SystemColors.Window;
             dgvKitaplar.Location = new Point(388, 136);
             dgvKitaplar.Name = "dgvKitaplar";
-            dataGridViewCellStyle9.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = Color.FromArgb(64, 0, 0);
-            dataGridViewCellStyle9.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle9.ForeColor = SystemColors.Info;
-            dataGridViewCellStyle9.SelectionBackColor = SystemColors.Info;
-            dataGridViewCellStyle9.SelectionForeColor = Color.FromArgb(64, 0, 0);
-            dataGridViewCellStyle9.WrapMode = DataGridViewTriState.True;
-            dgvKitaplar.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
-            dataGridViewCellStyle10.BackColor = Color.FromArgb(64, 0, 0);
-            dataGridViewCellStyle10.Font = new Font("Goudy Old Style", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle10.ForeColor = SystemColors.Info;
-            dataGridViewCellStyle10.SelectionBackColor = SystemColors.Info;
-            dataGridViewCellStyle10.SelectionForeColor = Color.FromArgb(64, 0, 0);
-            dgvKitaplar.RowsDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = Color.FromArgb(64, 0, 0);
+            dataGridViewCellStyle4.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle4.ForeColor = SystemColors.Info;
+            dataGridViewCellStyle4.SelectionBackColor = SystemColors.Info;
+            dataGridViewCellStyle4.SelectionForeColor = Color.FromArgb(64, 0, 0);
+            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.True;
+            dgvKitaplar.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle5.BackColor = Color.FromArgb(64, 0, 0);
+            dataGridViewCellStyle5.Font = new Font("Goudy Old Style", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle5.ForeColor = SystemColors.Info;
+            dataGridViewCellStyle5.SelectionBackColor = SystemColors.Info;
+            dataGridViewCellStyle5.SelectionForeColor = Color.FromArgb(64, 0, 0);
+            dgvKitaplar.RowsDefaultCellStyle = dataGridViewCellStyle5;
             dgvKitaplar.Size = new Size(755, 375);
             dgvKitaplar.TabIndex = 13;
             dgvKitaplar.CellContentClick += dgvKitaplar_CellContentClick;

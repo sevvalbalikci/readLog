@@ -7,8 +7,8 @@ namespace readLog
 {
     public static class CommentService
     {
-        private static readonly string DosyaYolu =
-            @"C:\Users\Şevval\source\repos\DotNetNot\readLog\comments.json";
+       private static readonly string projeDizini = Directory.GetParent(AppDomain.CurrentDomain.BaseDirectory).Parent.Parent.Parent.FullName;
+        private static readonly string DosyaYolu = Path.Combine(projeDizini, "comments.json");
 
         public static List<Comment> Yukle()
         {
