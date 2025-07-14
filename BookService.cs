@@ -10,17 +10,17 @@ namespace readLog
 {
     public static class BookService
     {
-        private static readonly string FilePath =
-            @"C:\Users\Şevval\source\repos\DotNetNot\readLog\books.json";
+        private static readonly string projeDizini = Directory.GetParent(AppDomain.CurrentDomain.BaseDirectory).Parent.Parent.Parent.FullName;
+        private static readonly string DosyaYolu = Path.Combine(projeDizini, "book.json");
 
         public static List<Book> Load()
         {
             try
             {
-                if (!File.Exists(FilePath))
+                if (!File.Exists(DosyaYolu))
                     return new List<Book>();
 
-                string json = File.ReadAllText(FilePath);
+                string json = File.ReadAllText(DosyaYolu);
                 if (string.IsNullOrWhiteSpace(json))
                     return new List<Book>();
 
@@ -36,7 +36,7 @@ namespace readLog
         public static void Save(List<Book> books)
         {
             string json = JsonConvert.SerializeObject(books, Newtonsoft.Json.Formatting.Indented);
-            File.WriteAllText(FilePath, json);
+            File.WriteAllText(DosyaYolu, json);
         }
     }
 }
